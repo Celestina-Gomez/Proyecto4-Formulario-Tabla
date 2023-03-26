@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="index.css" media="screen">
+    <!-- enlace con css--><!-- type="text/css"type(atributo no obligatorio en html5, indica el tipo de archivo vinculado) --><!-- herf ( esdonde especifica  la ruta del archivo) -->
+    <!-- media(etiqueta especifica)="screen"(indica su uso en una pantalla del ordenador)-->
+    <!--<link rel="stylesheet" href="style.css>-->
+    <title>Datos Alumnos</title>
+</head>
+
+<body>
+    <h1>Alumnos de 5C</h1>
+    <form><!-- class (atributo) -->
+        <div class="claseFormulario"><!-- claseFormulario identificador al cual vamos a poder asociar con css -->
+            <label>Faltas</label>
+            <div>
+                <input type="radio" id="inputasistencias" required>
+                <label for="inputasistencias">Asistencia</label>
+                <!-- type radio para seleccionar con un punto y circulo para seleccionar si a venido a clase o no -->
+                <!-- aqui he puesto el imputradio antes de la etiqueta label para los dos ejemplos de radio uno antes que es este u el radio punto seleccionado despues es No asistencia  -->
+
+                <label for="inputnoasistencias">No Asistencia</label>
+                <input type="radio" id="inputnoasistencias"
+                    required><!-- ???? como poner que no se repita los botones -->
+            </div>
+        </div>
+        <div class="claseFormulario">
+            <label
+                for="inputNombre">Nombre</label><!-- el for lo que hace es asociar el label con el id del input. si yo me pongo encima del nombre con el mouse mi cursor se va al button para empezar a escribir-->
+            <input type="text" id="inputNombre" name="inputNombre" required>
+        </div>
+        <div class="claseFormulario">
+            <label
+                for="inputApellidos">Apellidos</label><!-- el for lo que hace es asociar el label con el id del input. si yo me pongo encima del nombre con el mouse mi cursor se va al button para empezar a escribir-->
+            <input type="text" id="inputApellidos" name="trasactionApellidos" required>
+        </div>
+
+          <div class="claseFormulario">
+            <label for="inputClase">Clase</label>
+            <input type="text" id="inputClase" name="trasactionClase" required>
+        </div>
+        </div>
+
+        <div class="claseFormulario">
+            <label for="inputNota">Notas</label>
+            <input type="number" id="inputNota" name="trasactionNotas"
+                required><!-- solo numero por eso en type esta number y no text -->
+        </div>
+        <div class="claseFormulario">
+            <label for="inputAsignatura">Asignatura</label>
+            <input type="text" id="inputAsignatura" name="trasactionAsignatura"
+                required><!-- el name igual que el id -->
+        </div>
+
+
+        <div class="claseFormulario">
+            <button id="botonDeEnvio">Guardar</button>
+            <input type="button" value="Guardar" id="guardar" onclick="guardar()" />
+            <!-- se que va esta funcion pero si la pongo no me coge en style -->
+        </div>
+        <div class="claseFormulario">
+            <button id="botoneliminar">Eliminar</button>
+            <input type="button" value="Eliminar" id="eliminar" onclick="eliminar()" />
+        </div>
+        <div class="claseFormulario">
+            <button>Guardar Lista</button>
+            <!-- <input type="button" value="Guardar Lista" accesskey="s" id="guardarlista" onclick="guardarlista()" /> -->
+        </div>
+        <div class="claseFormulario">
+            <button>Cargar Lista</button>
+            <!-- <input type="button" value="Cargar Lista" accesskey="s" id="cargarlista" onclick="cargarlista()" /> -->
+            <!-- exactamente no se la diferencia entre uno y otro pero ahora me funciona el primero porque el segundo no me cambio style -->
+        </div>
+
+    </form>
+    <style>
+        /* 
+
+        
+
+        .claseFormulario {
+            /*las clase no se llaman por el nombre como puede ser h1 y form se llaman        
+               .yNombreDeClase 
+            background-color: aqua;*/
+        /* fondo color 
+            margin-top: 15px;*/
+        /* margen superior */
+        /*  margin-bottom: margen infeior;
+            margin-left:margen derecha ;
+            margin-right: margen izquierda;
+            padding: se desplaza pero va estar dentro de mi div; */
+        /* margin-right: 90px; */
+
+
+
+
+        /*  .claseformulario{
+            "background-color:rgb(255,0,0);""
+            background-color: aquamarine;
+        } */
+        /* las clases no se llaman con el nombre se llaman    .ynombre */
+
+
+
+        /*  si yo pongo td, y th en otra line el estilo sirve para los 2 */
+
+
+        /* de esta forma vamos dando estilos individuales a los td y th */
+        /*  td{
+            border: solid rgb(9, 125, 125);
+        }
+        th{
+            border: solid rgb(9, 125, 125);
+            font-size: 16px;  
+        } */
+    </style>
+    <!-- CREACION DE LA TABLA -->
+    <div class="tableForma">
+        <table>
+            <tr><!-- es una fila -->
+                <th>Faltas</th><!-- th es una celda -->
+                <th> Nombre</th>
+                <th>Apellidos </th>
+                <th>Clase</th>
+                <th>Asignatura </th>
+                <th>Notas
+                </th><!-- t de table y h de heard eso significa (cabecera de la tabla)-->
+            </tr><!-- tr es una fila de la tabla -->
+            <tr>
+                <td></td><!-- t de table y la d de datos (datos de tabla)-->
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td><!-- t de table y la d de datos (datos de tabla)-->
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <!-- esto tengo que conseguir dar un clic a Guaqrdar y lo introduzca en la lista -->
+        </table>
+    </div>
+
+    <!-- <form>
+    <input type="button" value="Start machine" accesskey="s" />
+    </form> -->
+
+
+
+    <!--    
+        <br>
+        <br>
+
+        <imput type="button" value="Guardar" id="guardar" onclick="guardar()" /></imput>
+
+
+        <br>
+        <imput type="button" value="Eliminar" id onclick="eliminar()" /></imput>
+        <br>
+        <imput type="submit" value="GuardarLista" id="guardarlista" onclick="GuardarLista()" /></imput>
+        <br>
+        <imput type="reset" value="Cargarlista" id="Cargarlista" onclick="CargarLista()"/></imput> -->
+
+
+
+
+
+    <script src="index.js" type="text/javascript"></script><!-- para enlazar con javascript -->
+</body>
+
+</html>

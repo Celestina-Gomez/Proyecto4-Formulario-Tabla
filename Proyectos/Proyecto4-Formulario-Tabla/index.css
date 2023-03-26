@@ -1,0 +1,52 @@
+label {
+    background-repeat: no-repeat;
+
+}
+
+.tableForma table{
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    font-size: 35px;
+    background-color: hsl(181, 70%, 44%);
+}
+
+form {
+    text-align: center;
+}
+
+td,
+th {
+    text-align: center;
+    border: solid rgb(9, 125, 125);
+    padding: 10px;
+    /*  (expandan los bordes y haya espacio dentro)
+            padding-top:10px;(para arriba)
+            padding: left 10px;(para izquierda)
+            padding-bottom:10px;(para abajo)
+            padding-right:10px; (para derecha*/
+}
+
+.claseFormulario {
+    /*las clase no se llaman por el nombre como puede ser h1 y form se llaman        
+       .yNombreDeClase */
+    background-color: aqua;
+    /* fondo color */
+    margin-top: 15px;
+    /* margen superior */
+    /*  margin-bottom: margen infeior;
+    margin-left:margen derecha ;
+    margin-right: margen izquierda;
+    padding: se desplaza pero va estar dentro de mi div; */
+    /* margin-right: 90px; */
+    text-align: center;
+
+}
+
+#botonDeEnvio {
+    /* los id se llaman #yNombreDeid */
+    font-size: 17px;
+    background-color: rgb(127, 241, 241);
+}
